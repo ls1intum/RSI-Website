@@ -1,0 +1,34 @@
+[
+  {
+    "label": "Responsibility",
+    "value": "responsibility",
+    "color": "#0EA5E9",
+    "homeDescription": "Research and explore.",
+    "description": "Reflect on your role as a designer and the impact of your decisions on society. Use methods like the Privilege Walk and Place Mat to explore privilege, responsibility, and ethical implications. Design with awareness to create products that contribute positively to people and communities.",
+    "track": "Responsibility"
+  },
+  {
+    "label": "Diversity",
+    "value": "diversity",
+    "color": "#A855F7",
+    "homeDescription": "Focus and prioritize.",
+    "description": "Recognize and challenge bias in digital products to ensure fair and equitable design. Apply Inclusive Segment Cards to broaden perspectives and include diverse user experiences. Embrace difference as a driver for more creative and representative solutions.",
+    "track": "Diversity"
+  },
+  {
+    "label": "Inclusion",
+    "value": "inclusion",
+    "color": "#22C55E",
+    "homeDescription": "Prototype and experiment.",
+    "description": "Design for everyone by identifying and removing barriers to access. Use Critical Reflection Cards to uncover exclusionary patterns and explore inclusive solutions. Create products that enable participation and belonging for all users.",
+    "track": "Inclusion"
+  },
+  {
+    "label": "Sustainability",
+    "value": "sustainability",
+    "color": "#F59E0B",
+    "homeDescription": "Test and validate.",
+    "description": "Design with the planet in mind by understanding the ecological impact of digital products. Map environmental effects using the Eco-systemic Journey Map to inform greener prototypes. Aim for solutions that balance innovation with environmental responsibility.",
+    "track": "Sustainability"
+  }
+]

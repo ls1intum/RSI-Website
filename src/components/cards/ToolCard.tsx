@@ -1,8 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { truncate } from '@lib/truncate';
-import { Card, CardBody } from '@components/cards/Card';
+import {truncate} from '@lib/truncate';
+import {Card, CardBody} from '@components/cards/Card';
 
 // 1. Define a specific interface for the tool prop
 // This matches the "normalizedTools" shape from your ToolLibrary
@@ -32,7 +32,7 @@ export function ToolCard({
                 <div className="flex items-center gap-3 mb-4">
                     <div
                         className="w-3 h-3 rounded-full shrink-0"
-                        style={{ backgroundColor: catColor ?? 'hsl(var(--muted-fg))' }}
+                        style={{backgroundColor: catColor ?? 'hsl(var(--muted-fg))'}}
                     />
                     {/* Access properties safely now that they are typed */}
                     {tool._category !== 'uncategorized' && (

@@ -1,0 +1,289 @@
+<figure class="hero">
+    <img src="/png/trapalert/trapalertHero.png" alt="TrapAlert hero image" />
+</figure>
+
+<p>
+    TrapAlert is an accessibility observability platform that automatically detects and surfaces moments of user frustration caused by digital barriers. By transforming silent struggles into empathetic, data-driven insights for development teams, it accelerates the creation of a more inclusive, equitable, and accessible digital world for everyone.
+</p>
+
+<h2>The Problem: The Silent Struggle for Digital Accessibility</h2>
+
+<p>
+    In digital product development, a costly gap exists between design intent and the actual
+    experience of users with disabilities. This gap is filled with moments of frustration that
+    often go undocumented, manifesting in traditional analytics as unexplained drop-offs, low
+    conversion rates, and abandoned carts. These silent struggles are more than just bugs; they
+    are barriers to equal access that represent a costly mystery for businesses and a significant
+    source of exclusion for users. Closing this gap is a strategic imperative for any
+    organization committed to true inclusivity.
+</p>
+
+<h3>Screen Reader &amp; Keyboard-Only Users</h3>
+
+<p>
+    For individuals who rely on screen readers or keyboard-only navigation due to visual or motor
+    impairments, the web can be a landscape of impassable barriers. They frequently encounter
+    inaccessible UI patterns, such as "keyboard traps," where focus becomes locked on an element,
+    rendering the rest of the page unreachable without a mouse. This is not a new or niche
+    problem; the lack of keyboard accessibility has been a top-five issue for screen reader users
+    for over 14 years, a clear indicator of systemic neglect. When a user gets stuck in a form or
+    modal, they are forced to abandon their task, leading to extreme frustration and a tangible
+    sense of being excluded.
+</p>
+
+<h3>Users with Cognitive or Neurodiverse Conditions</h3>
+
+<p>
+    This group of users, who may have conditions affecting focus and patience, is often
+    disadvantaged by interfaces that demand high "cognitive load tolerance." Unintuitive
+    workflows, ambiguous icons, or broken elements, often called "mystery meat" UI, can quickly
+    lead to confusion and task abandonment. Their struggles are frequently miscategorized as
+    "user error," and unlike more vocal users, they will typically leave a site in silent
+    frustration rather than submit a feedback form. Their experience is one of confusion and a
+    loss of confidence, often invisible in traditional analytics.
+</p>
+
+<p>
+    These invisible frustrations, born from different forms of exclusion, cannot be fixed if they
+    cannot be seen, requiring a new method of detection that surfaces these moments of friction
+    automatically.
+</p>
+
+<h2>Our Goal: Giving a Voice to User Frustration</h2>
+
+<p>
+    The primary goal of TrapAlert is to bridge the profound communication gap between marginalized
+    users and the development teams building their digital experiences. It is designed not merely
+    as a tool for finding bugs, but as a mechanism for building empathy and embedding the user's
+    voice directly into the development lifecycle.
+</p>
+
+<p>
+    Our core mission is to transform silent struggles into actionable, evidence-based insights.
+    TrapAlert gives a "voice" to users who are often unheard by making their moments of
+    frustration visible, tangible, and undeniable through concrete data. Instead of relying on
+    users to report issues, a step many are unable or unwilling to take, we capture the evidence
+    of their struggle as it happens.
+</p>
+
+<p>
+    This goal is achieved through a combination of intelligent behavioral detection, insightful
+    developer tooling, and a conscious commitment to ethical design.
+</p>
+
+<h2>The Solution: How TrapAlert Achieves Its Goal</h2>
+
+<p>
+    TrapAlert's strategic approach is to act as an "accessibility smoke detector," automatically
+    surfacing friction points that indicate a user is struggling. This shifts development teams
+    from a reactive posture, where they wait for an issue to become a complaint or lawsuit, to a
+    proactive one, where they can identify and resolve barriers before they cause widespread user
+    churn.
+</p>
+
+<h3>The BehaviorEngine: Translating Clicks into Clarity</h3>
+
+<p>
+    The BehaviorEngine is the core detection mechanism of TrapAlert, designed to identify specific
+    patterns of user interaction that are strong proxies for frustration. It translates ambiguous
+    user behavior into clear, engineered signals for developers. Key signals include:
+</p>
+
+<ul class="icon-list">
+    <li>
+        <strong>Dead-End Tab / Focus Loops</strong>
+        <p>Captures instances where a user presses the tab key 15+ times with no focus change. This is a classic indicator of a keyboard trap, a critical barrier for keyboard-only and screen reader users.</p>
+    </li>
+    <li>
+        <strong>Rage Clicks</strong>
+        <p>Detects 5+ rapid clicks on the same element. This is a powerful signal of user confusion, indicating a broken button, an unresponsive UI, or a design that violates user expectations.</p>
+    </li>
+    <li>
+        <strong>Input Abandonment / "U-turn"</strong>
+        <p>Identifies when a user begins to fill out an input field, only to delete their entry and leave the form. This behavior often points to a loss of confidence or clarity in a workflow, suggesting the form is too complex or lacks necessary guidance.</p>
+    </li>
+</ul>
+
+<h3>The Developer Dashboard: From Data to Empathy</h3>
+
+<p>
+    The Developer Dashboard is the primary interface where data from the BehaviorEngine is
+    transformed into actionable insights. When a frustration signal is detected, TrapAlert
+    provides developers with a session replay and a DOM snapshot. This creates a powerful
+    "empathy moment", watching a recording of a real person getting stuck makes the abstract
+    concept of a "bug" a tangible human experience. This process turns vague, deprioritized
+    issues into undeniable, high-priority tasks by removing any ambiguity about the user's
+    experience. This empathy is a direct driver of business metrics; it motivates teams to fix
+    the very issues that cause customer churn, which correlates with higher conversion and
+    retention.
+</p>
+
+<figure>
+    <video controls>
+        <source src="/videos/trapalert/trapalert_video.mov" type="video/mp4" />
+    </video>
+    <figcaption>See TrapAlert in action with this screen recording demonstration.</figcaption>
+</figure>
+
+<h3>Conscious Design: Prioritizing Ethics and Performance</h3>
+
+<p>
+    Our strategy required designing TrapAlert with a deep awareness of its potential impact on
+    user privacy and system performance. These considerations are not afterthoughts but core
+    tenets of its architecture, reflecting a deliberate navigation of critical trade-offs:
+</p>
+
+<ul class="icon-list">
+    <li>
+        <strong>Privacy-First</strong>
+        <p>Our privacy-first architecture is a critical design choice to preempt significant legal and reputational risks. With real lawsuits regarding session replay tools violating wiretapping laws, TrapAlert is engineered to automatically mask PII from form fields and session replays. This respects user agency and makes TrapAlert a safer, more enterprise-ready solution than competitors who may overlook this.</p>
+    </li>
+    <li>
+        <strong>Lightweight Performance</strong>
+        <p>To manage the trade-off between data richness and performance, TrapAlert employs smart data management. It uses sampling to avoid recording every session, compresses data payloads, and captures only short clips around frustration events, ensuring the tool remains as lightweight as possible and minimizes its environmental footprint.</p>
+    </li>
+    <li>
+        <strong>Ethical Balance</strong>
+        <p>The design reflects a conscious trade-off between providing post-hoc analysis for developers and offering real-time aid to users. This ethical balancing act ensures the tool is used constructively to improve experiences, not to monitor users invasively.</p>
+    </li>
+</ul>
+
+<p>
+    By combining automated detection with empathetic reporting and ethical design, TrapAlert
+    provides a holistic solution that moves beyond simple compliance to foster genuine digital
+    inclusion.
+</p>
+
+<h2>The TrapAlert Experience: A Systemic Journey from Barrier to Benefit</h2>
+
+<p>
+    A Systemic Journey Map provides a holistic view of TrapAlert's impact, moving beyond a simple
+    user flow to analyze the first, second, and third-order effects of the product. It illustrates
+    how a single moment of user frustration can trigger a virtuous cycle of improvement that
+    benefits the user, the development team, and the digital ecosystem as a whole.
+</p>
+
+<div class="table-wrap">
+    <table>
+        <thead>
+        <tr>
+            <th></th>
+            <th>Encountering an Accessibility Barrier</th>
+            <th>TrapAlert Detection &amp; Reporting</th>
+            <th>Developer Investigation and Insight</th>
+            <th>Solution Implementation and Improved Experience</th>
+            <th>Long-Term Systemic and Cultural Shift</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Stage 1: User Actions</td>
+            <td>A user attempts a task but encounters a barrier like a keyboard trap. Their immediate experience is one of frustration and exclusion. Critically, most will simply leave rather than report the issue (only ~43% might leave feedback), making their struggle invisible to traditional feedback channels. This friction leads to task abandonment and a loss of trust.</td>
+            <td>Running silently, the TrapAlert SDK detects the struggle by recognizing a frustration signal. It captures a session replay and assigns a "struggle score" to indicate severity before sending this evidence to the server. This represents a key trade-off: a minor performance cost is accepted to ensure the user's otherwise invisible struggle is validated. The system can also be configured to use a "shadow DOM UI" to offer real-time assistance, balancing post-hoc analysis with immediate user benefit.</td>
+            <td>A developer is alerted to the high-frustration session. By watching the replay, they witness the user's struggle firsthand, creating an "empathy moment" that provides undeniable evidence of the problem. This clarity not only drives business metrics by motivating fixes for issues that cause customer churn but also shifts internal power dynamics: the needs of marginalized users are now backed by concrete evidence and priority, rather than being dismissed as edge cases.</td>
+            <td>The development team implements a fix. The next time a user encounters that part of the product, their experience is seamless. This directly benefits the user who originally struggled, but the improvement often creates a "curb-cut effect", an accessibility fix, such as better focus indicators or clearer form design, enhances usability for all users.</td>
+            <td>With wide adoption, TrapAlert's methodology fosters a cultural shift toward proactive digital inclusion. This creates a new category of "Accessibility Observability," providing a competitive advantage by turning an organization's biggest accessibility liabilities into sources of innovation and user loyalty. At a societal level, this contributes to a more equitable web where digital barriers are systematically identified and removed, enabling greater participation for everyone.</td>
+        </tr>
+        <tr>
+            <td>User Goals</td>
+            <td>Complete a task or access information without encountering barriers</td>
+            <td>Have their struggle recognized and validated, even if they don't report it</td>
+            <td>Understand the root cause of the barrier through clear evidence</td>
+            <td>Experience seamless interaction with the fixed interface</td>
+            <td>Participate in a more inclusive digital ecosystem</td>
+        </tr>
+        <tr>
+            <td>Pain Points / Needs</td>
+            <td>Invisible barriers prevent task completion; frustration goes unreported; lack of accessibility leads to exclusion</td>
+            <td>Struggles remain invisible to developers; traditional feedback channels are inaccessible; performance concerns must be balanced with data capture</td>
+            <td>Need concrete evidence to prioritize accessibility fixes; difficulty understanding user struggle from abstract bug reports; competing priorities in development</td>
+            <td>Ensuring fixes actually resolve the barrier; testing accessibility improvements; maintaining improvements over time</td>
+            <td>Sustaining cultural commitment to accessibility; ensuring accessibility becomes a competitive advantage; contributing to systemic change</td>
+        </tr>
+        <tr>
+            <td>Gains</td>
+            <td>Awareness of accessibility barriers through TrapAlert detection</td>
+            <td>Validation of struggle through automated detection; evidence captured for developer review</td>
+            <td>Clear evidence of user struggle; empathy-driven prioritization; concrete data to support accessibility work</td>
+            <td>Improved user experience; barrier removal; enhanced usability for all users (curb-cut effect)</td>
+            <td>Cultural shift toward inclusion; competitive advantage through accessibility; contribution to equitable web</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<p>
+    This journey demonstrates how TrapAlert transforms individual moments of friction into
+    systemic improvements, creating a positive feedback loop that elevates the standard for
+    digital accessibility.
+</p>
+
+<div class="callout success">
+    <strong>Impact Statement</strong>
+    <p>TrapAlert is an accessibility observability platform that automatically detects and surfaces moments of user frustration caused by digital barriers. By transforming silent struggles into empathetic, data-driven insights for development teams, it accelerates the creation of a more inclusive, equitable, and accessible digital world for everyone.</p>
+</div>
+
+<h2>Team &amp; Contributions</h2>
+
+<p>This section outlines the roles and responsibilities of the core project team responsible for the strategy, design, and development of TrapAlert.</p>
+
+<div style="display:flex; gap:1.5rem; justify-content:center; margin-top:1.5rem;">
+    <figure style="margin:0; flex:1; max-width:200px;">
+        <img src="/png/trapalert/vishi.jpeg" alt="Vishi" style="width:100%; height:auto; object-fit:contain; border-radius:0.75rem;" />
+        <figcaption>Vishi</figcaption>
+    </figure>
+    <figure style="margin:0; flex:1; max-width:200px;">
+        <img src="/png/trapalert/yassine.jpeg" alt="Yassine" style="width:100%; height:auto; object-fit:contain; border-radius:0.75rem;" />
+        <figcaption>Yassine</figcaption>
+    </figure>
+</div>
+
+<p>
+    We're a team of transformation designers who believe in design as activism. TrapAlert was
+    created collaboratively, combining expertise in product strategy, user experience design, and
+    technical development to address the critical gap in digital accessibility.
+</p>
+
+<p>
+    <strong>Vishi</strong> led the product strategy and user experience design, defining the core
+    vision for TrapAlert as an "accessibility smoke detector." They developed the BehaviorEngine
+    framework, designed the systemic journey map, and created the developer dashboard concept that
+    transforms frustration signals into empathetic insights. They also contributed to the ethical
+    design principles and privacy-first architecture decisions that make TrapAlert enterprise-ready.
+</p>
+
+<p>
+    <strong>Yassine</strong> focused on the technical development and implementation aspects of
+    TrapAlert, working on the BehaviorEngine detection mechanisms and the session replay
+    infrastructure. They contributed to the performance optimization strategies, data management
+    systems, and the development of the demo video that showcases TrapAlert in action.
+</p>
+
+<p>
+    Together, we collaborated on the presentation slides, documentation, and the overall narrative
+    that positions TrapAlert as a solution that bridges the communication gap between marginalized
+    users and development teams. Our collaborative approach ensured that both the strategic vision
+    and technical feasibility were addressed throughout the project lifecycle.
+</p>
+
+<h2>Presentation Slides</h2>
+
+<figure>
+    <iframe class="pdf" src="/files/trapalert/trapalert_presentation.pdf" height="600" title="TrapAlert presentation slides"></iframe>
+    <figcaption>TrapAlert presentation slides</figcaption>
+</figure>
+
+<h2>Documentation</h2>
+
+<figure>
+    <iframe class="pdf" src="/files/trapalert/documentation Trapalert.pdf" height="600" title="TrapAlert documentation"></iframe>
+    <figcaption>TrapAlert documentation</figcaption>
+</figure>
+
+<h2>AI Usage Disclaimer</h2>
+
+<p>
+    The use of AI was included in every writing process after a careful spec and data collection
+    session by the two users. The sole purpose of AI was to refine and polish writing and optimize
+    formulations. The raw data was collected by us and can be viewed upon request.
+</p>

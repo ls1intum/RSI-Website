@@ -1,7 +1,7 @@
 // components/ui/Tabs.tsx
 'use client'
 
-import { cn } from '@/lib/cn'
+import {cn} from '@/lib/cn'
 import React from 'react'
 
 export type TabItem = {
@@ -87,7 +87,7 @@ export function Tabs({
                         {item.color && (
                             <span
                                 className="inline-block w-2 h-2 rounded-full mr-2"
-                                style={{ backgroundColor: item.color }}
+                                style={{backgroundColor: item.color}}
                                 aria-hidden="true"
                             />
                         )}

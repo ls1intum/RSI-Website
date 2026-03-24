@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 184.25 184.25">
+  <defs>
+    <clipPath id="b">
+      <rect y="0" width="184.25" height="184.25" fill="none"/>
+    </clipPath>
+    <clipPath id="c">
+      <rect x="-32768" y="-32582.75" width="65535" height="65535" fill="none"/>
+    </clipPath>
+    <clipPath id="d">
+      <rect x="-32768" y="-32582.75" width="65535" height="65535" fill="none"/>
+    </clipPath>
+    <clipPath id="e">
+      <rect x="-32768" y="-32582.75" width="65535" height="65535" fill="none"/>
+    </clipPath>
+    <clipPath id="f">
+      <rect x="-32768" y="-32582.75" width="65535" height="65535" fill="none"/>
+    </clipPath>
+    <clipPath id="g">
+      <rect x="-32768" y="-32582.75" width="65535" height="65535" fill="none"/>
+    </clipPath>
+    <clipPath id="h">
+      <rect x="-32768" y="-32582.75" width="65535" height="65535" fill="none"/>
+    </clipPath>
+    <clipPath id="i">
+      <rect x="-32768" y="-32582.75" width="65535" height="65535" fill="none"/>
+    </clipPath>
+    <clipPath id="j">
+      <rect x="-32768" y="-32582.75" width="65535" height="65535" fill="none"/>
+    </clipPath>
+  </defs>
+  <rect y="0" width="184.25" height="184.25" rx="19.59" ry="19.59" fill="#de98ae"/>
+  <g clip-path="url(#b)">
+    <g>
+      <g opacity=".2">
+        <g clip-path="url(#c)">
+          <path d="M92.13-16.47c59.91,0,108.47,48.56,108.47,108.47s-48.56,108.47-108.47,108.47S-16.35,151.91-16.35,92,32.22-16.47,92.13-16.47" fill="#f7cf6d"/>
+        </g>
+      </g>
+      <g opacity=".2">
+        <g clip-path="url(#d)">
+          <path d="M92.13-3.71c52.86,0,95.71,42.85,95.71,95.71s-42.85,95.71-95.71,95.71S-3.58,144.86-3.58,92,39.27-3.71,92.13-3.71" fill="#f7cf6d"/>
+        </g>
+      </g>
+      <g opacity=".2">
+        <g clip-path="url(#e)">
+          <path d="M92.13,9.05c45.81,0,82.95,37.14,82.95,82.95s-37.14,82.95-82.95,82.95S9.18,137.81,9.18,92,46.31,9.05,92.13,9.05" fill="#f7cf6d"/>
+        </g>
+      </g>
+      <g opacity=".2">
+        <g clip-path="url(#f)">
+          <path d="M92.13,20.54c39.47,0,71.46,31.99,71.46,71.46s-31.99,71.46-71.46,71.46S20.66,131.47,20.66,92,52.66,20.54,92.13,20.54" fill="#f7cf6d"/>
+        </g>
+      </g>
+      <g opacity=".2">
+        <g clip-path="url(#g)">
+          <path d="M92.13,31.08c33.64,0,60.92,27.28,60.92,60.92s-27.27,60.92-60.92,60.92-60.92-27.27-60.92-60.92,27.27-60.92,60.92-60.92" fill="#f7cf6d"/>
+        </g>
+      </g>
+      <g opacity=".25">
+        <g clip-path="url(#h)">
+          <path d="M92.13,41.8c27.73,0,50.2,22.48,50.2,50.2s-22.48,50.2-50.2,50.2-50.2-22.48-50.2-50.2,22.48-50.2,50.2-50.2" fill="#f7cf6d"/>
+        </g>
+      </g>
+      <g opacity=".3">
+        <g clip-path="url(#i)">
+          <path d="M92.13,54.23c20.86,0,37.77,16.91,37.77,37.77s-16.91,37.77-37.77,37.77-37.77-16.91-37.77-37.77,16.91-37.77,37.77-37.77" fill="#f7cf6d"/>
+        </g>
+      </g>
+      <g opacity=".4">
+        <g clip-path="url(#j)">
+          <path d="M92.13,63.47c15.76,0,28.53,12.78,28.53,28.53s-12.77,28.53-28.53,28.53-28.53-12.78-28.53-28.53,12.77-28.53,28.53-28.53" fill="#f7cf6d"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

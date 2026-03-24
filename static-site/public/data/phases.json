@@ -1,0 +1,42 @@
+[
+  {
+    "label": "Discover",
+    "value": "discover",
+    "color": "#0EA5E9",
+    "homeDescription": "Research and explore.",
+    "description": "Open up your perspective. Research users, communities, and ecosystems to uncover real needs and hidden challenges. Apply interviews, Inclusive Segment Cards, and Systemic Journey Maps to reveal not just functional goals, but also social and environmental impacts.",
+    "track": "Design"
+  },
+  {
+    "label": "Define",
+    "value": "define",
+    "color": "#A855F7",
+    "homeDescription": "Focus and prioritize.",
+    "description": "Make sense of what you’ve learned. Narrow down insights, clarify the problem, and identify what matters most. Use Conscious Requirements to prioritize solutions that balance usability, fairness, and sustainability, setting a clear, responsible direction.",
+    "track": "Design"
+  },
+  {
+    "label": "Develop",
+    "value": "develop",
+    "color": "#22C55E",
+    "homeDescription": "Prototype and experiment.",
+    "description": "Bring ideas to life through experimentation. Sketch, prototype, and refine with continuous feedback. Use the Prototyping Playground to test flows and features, ensuring accessibility, inclusion, and ecological responsibility at every step.",
+    "track": "Design"
+  },
+  {
+    "label": "Deliver",
+    "value": "deliver",
+    "color": "#F59E0B",
+    "homeDescription": "Test and validate.",
+    "description": "Move from prototype to reality. Test with diverse users, gather feedback, and reflect on social and environmental outcomes. Refine based on what you learn, then deliver responsibly to create lasting, positive change.",
+    "track": "Design"
+  },
+  {
+    "label": "Development",
+    "value": "development",
+    "color": "#EF4444",
+    "homeDescription": "Build and maintain.",
+    "description": "Turn designs into resilient products. Write code with accessibility, transparency, and sustainability built in. Focus on durability, performance, and adaptability so the software can evolve responsibly and remain impactful over time.",
+    "track": "Development"
+  }
+]

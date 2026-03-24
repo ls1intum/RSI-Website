@@ -1,0 +1,7 @@
+# Don't copy these to Docker image
+README.md
+QUICKSTART.md
+serve.py
+.DS_Store
+*.md
+!nginx.conf

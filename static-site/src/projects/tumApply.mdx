@@ -1,0 +1,333 @@
+---
+title: "TUMApply"
+description: "TUMApply rethinks the university application process at TUM. It focuses on inclusivity, transparency, and sustainability, providing a supportive ecosystem for diverse applicants."
+date: "2026-01-15"
+heroSrc: "png/tumapply/tumapply_hero.png"
+heroAlt: "TUMApply – inclusive, transparent, and supportive university application experience"
+lead: "TUMApply transforms the TUM application process into a clear, supportive, and fair digital service. By addressing systemic, emotional, and informational barriers, it ensures equitable access to higher education for all applicants."
+---
+
+## The Problem
+
+Doctoral education in Germany shows persistent structural inequalities in access and participation. In computer science, 78% of doctoral candidates are male, and only 28% are first-generation migrants, indicating ongoing gender and migration imbalances. Social background also plays a decisive role: 16% of doctoral candidates have parents with a PhD, 47% have parents with a university degree, and 37% come from families without higher education. These figures illustrate how prior academic exposure and social background strongly influence access to doctoral studies.
+
+Simultaneously the application process is often fragmented and inconsistent. Information about programs, funding, and requirements is spread across multiple channels, varies by department, and is communicated with differing levels of clarity. This lack of transparency reinforces unequal access and reproduces existing participation patterns.
+
+As a result, women, first-generation migrants, and applicants from non-academic families face compounded barriers that reduce their likelihood of pursuing and completing doctoral degrees. This limits social mobility and narrows the range of perspectives in doctoral research, with broader implications for innovation and the academic system as a whole.
+
+<div style={{ display: 'flex', flexWrap: 'wrap', marginTop: '2rem' }}>
+
+  {/* First row: two images */}
+  <div style={{ width: '50%', textAlign: 'center' }}>
+    <img src="/png/tumapply/Figure_1.png" alt="Migration Background" style={{ width: '100%', height: 'auto' }} />
+  </div>
+
+  <div style={{ width: '50%', textAlign: 'center' }}>
+    <img src="/png/tumapply/Figure_2.png" alt="Parenthood" style={{ width: '100%', height: 'auto' }} />
+  </div>
+
+  {/* Second row: third image */}
+  <div style={{ width: '50%', textAlign: 'center', marginTop: '1rem' }}>
+    <img src="/png/tumapply/Figure_3.png" alt="Parental Education Background" style={{ width: '100%', height: 'auto' }} />
+  </div>
+  <div style={{ width: '50%', textAlign: 'center' }}>
+    <img src="/png/tumapply/Figure_4.png" alt="Gender in CS" style={{ width: '100%', height: 'auto' }} />
+  </div>
+
+</div>
+
+<div style={{ textAlign: 'center', fontStyle: 'italic', marginTop: '0.5rem', fontSize: '0.9rem' }}>
+  Figures adapted from <a href="https://nacaps-datenportal.de/indikatoren/A0.html" target="_blank" rel="noopener noreferrer">NACAPS study, 2021/22, Germany</a> and <a href="https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Bildung-Forschung-Kultur/Hochschulen/Publikationen/Downloads-Hochschulen/statistischer-bericht-promovierende-5213501247005.xlsx?__blob=publicationFile&v=4" target="_blank" rel="noopener noreferrer">Destatis, Statistical Report on Doctoral Candidates, 2021</a>.
+</div>
+
+## The Goal
+
+TUMApply seeks to **address structural barriers and procedural complexity in doctoral applications** by creating a **transparent, coherent, and well-supported application experience**. Its objectives are designed to improve clarity, reduce administrative inefficiencies, and support equitable participation:
+
+<FeatureList
+    items={[
+        {
+            title: "Timely & Equal Access to Opportunities",
+            body: "Centralizes doctoral positions, funding calls, and deadlines in a single, accessible interface, reducing dependence on informal networks and ensuring that all applicants receive the same information at the same time."
+        },
+        {
+            title: "Sustainable & Coherent Application Infrastructure",
+            body: "Unifies and standardizes application requirements across departments while streamlining document handling and review processes. This reduces redundancy, paper-based workflows, and administrative overhead, supporting both environmental sustainability and long-term system maintainability."
+        },
+        {
+            title: "Reduced Administrative Burden through Responsible Automation",
+            body: "Applies rule-based automation to remove unnecessary manual steps in the application process, such as repeated document submissions, redundant communication, and unclear status checks. By minimizing avoidable user actions and system interactions, the design reduces administrative load, server activity, and energy use while maintaining transparency and human oversight."
+        },
+        {
+            title: "Equitable Access Beyond Informal Gatekeeping",
+            body: "Promotes fair participation by minimizing reliance on prior institutional knowledge, personal contacts, or insider guidance. Structured information, anonymized early review stages, and open communication formats help shift access from individual privilege to institutional responsibility."
+        }
+    ]}
+/>
+
+## Typical Applicant Overview
+
+**Profile Example:**  
+
+- **Gender / Education:** Heterosexual, educated male  
+- **Age:** Approximately 31 years old  
+- **Citizenship:** German  
+- **Financial Situation:** Secure  
+- **Background:** Comes from an academic household  
+
+This profile represents the **implicit reference user** for whom many doctoral application systems have traditionally been beneficial. TUMApply continues to support this applicant through **efficient processes**, **clear guidance**, and **streamlined workflows**.
+
+At the same time, TUMApply recognizes that **supporting a system primarily around the typical applicant reinforces structural exclusion**. The platform is therefore intentionally built to serve the typical user effectively, *while also providing targeted support for applicants whose needs are not fully addressed by standard academic processes*.
+
+## Focused User Groups
+
+<FeatureList
+  items={[
+    {
+      title: "First-Generation Applicants",
+      body: (
+        <>
+          <strong>Challenges:</strong> Often lack access to informal academic knowledge, such as how supervisors evaluate motivation letters, the differences in doctoral funding models, or which requirements are flexible versus mandatory. This can lead to early self-selection out of the process.
+          <br />
+          <strong>Solutions:</strong> Plain-language guidance for applications, step-by-step explanations of requirements to reduce overload, and funding literacy modules explaining contracts and scholarships.
+        </>
+      ),
+    },
+    {
+      title: "Older Candidates and Career Switchers",
+      body: (
+        <>
+          <strong>Challenges:</strong> May question the relevance of professional experience or worry about age-related bias. Non-linear CVs are often undervalued despite reflecting valuable skills.
+          <br />
+          <strong>Solutions:</strong> Structured guidance that helps applicants frame professional experience in research-relevant terms, and transparent evaluation criteria that explain how non-academic experience can be considered.
+        </>
+      ),
+    },
+    {
+      title: "International Applicants",
+      body: (
+        <>
+          <strong>Challenges:</strong> Face language barriers, unfamiliar academic conventions, visa requirements, and degree recognition issues, often with high stakes and limited feedback.
+          <br />
+          <strong>Solutions:</strong> Multilingual information and plain-language translations across key pages, contextual explanations of academic conventions, and regularly updated visa and legal guidance surfaced through the platform’s news and information sections, aligned with application milestones.
+        </>
+      ),
+    },
+    {
+      title: "Applicants with Migrational Backgrounds",
+      body: (
+        <>
+          <strong>Challenges:</strong> May experience implicit bias, limited access to academic networks, and uncertainty about belonging, even if educated locally.
+          <br />
+          <strong>Solutions:</strong> Anonymized early-stage review removing personal identifiers, randomized pseudonyms (e.g., “Green Penguin”), and structured, criteria-based feedback to reduce perceived arbitrariness. Clear previews of the application and evaluation process, explicit expectations at each stage, and visible signals of inclusion reinforce belonging.
+        </>
+      ),
+    },
+    {
+      title: "Women & Non-Male Applicants in STEM",
+      body: (
+        <>
+          <strong>Challenges:</strong> Underrepresentation and implicit bias affect confidence, evaluation outcomes, and long-term participation in STEM.
+          <br />
+          <strong>Solutions:</strong> Anonymized names in early-stage review to reduce bias, standardized evaluation frameworks, and visible mentoring and DEI programs throughout the application journey.
+        </>
+      ),
+    },
+    {
+      title: "Applicants with Disabilities",
+      body: (
+        <>
+          <strong>Challenges:</strong> Frequently encounter inaccessible interfaces and unclear accommodation processes.
+          <br />
+          <strong>Solutions:</strong> Accessibility-first design meeting WCAG standards, confidential accommodation requests separate from evaluation, and adaptive interfaces allowing users to control interaction complexity.
+        </>
+      ),
+    },
+  ]}
+/>
+
+
+## Guidance, Transparency & Applicant Experience
+
+TUMApply consolidates fragmented doctoral application information into a **single, structured, and accessible system**. Instead of relying on prior institutional knowledge, applicants receive clear, plain-language guidance aligned with their stage in the application journey. By reducing unnecessary steps, repeated searches, and informal back-and-forth communication, the platform supports clarity, inclusion, and sustainable digital use.
+
+### Key Applicant-Facing Features
+
+<IconList
+    items={[
+        {
+            title: "Centralized Information Hub",
+            body: "Programs, funding calls, deadlines, and procedural guidance are presented in one coherent structure, reducing fragmentation and search effort."
+        },
+        {
+            title: "Plain-Language & Multilingual Content",
+            body: "Key pages are written in accessible language and available in multiple languages to lower linguistic and cognitive barriers."
+        },
+        {
+            title: "Progressive Guidance",
+            body: "Information is revealed step by step and aligned with applicant decision points, reducing overload and uncertainty."
+        },
+        {
+            title: "Funding & Visa Information via News",
+            body: "Relevant funding programs, visa updates, and institutional announcements are surfaced through a curated news section."
+        },
+        {
+            title: "Transparent Status Tracking",
+            body: "Applicants can track the current status of their application and next steps in one place, reducing uncertainty, repeated checking, and frustration."
+        },
+        {
+            title: "Accessible by Design",
+            body: "Interfaces follow accessibility standards (e.g. contrast, text size, keyboard navigation) to support diverse abilities."
+        }
+    ]}
+/>
+
+### Communication & Knowledge Exchange
+
+<IconList
+    items={[
+        {
+            title: "Public Q&A & FAQ",
+            body: "Applicants can browse shared questions and answers, making informal academic knowledge visible to all."
+        },
+        {
+            title: "Private 1-to-1 Support",
+            body: "Confidential conversations with staff or experts enable applicants to clarify procedural or organizational questions without fear of negative evaluation."
+        },
+        {
+            title: "Applicant Info Fair",
+            body: "An annual (hybrid) event connects applicants with professors, doctoral candidates, and staff; sessions are recorded and reused as long-term resources."
+        }
+    ]}
+/>
+
+## Fair & Transparent Reviewing
+
+Inclusive design principles are embedded directly into the review process to support equitable evaluation and build trust in the system.
+
+<IconList
+    items={[
+        {
+            title: "Anonymized Early Review",
+            body: "Applications are initially shown without names or personal identifiers, focusing evaluation on content and qualifications."
+        },
+        {
+            title: "Randomized Application Order",
+            body: "Applications are displayed in randomized order to reduce order effects and unconscious prioritization."
+        },
+        {
+            title: "Structured Shortlisting",
+            body: "Favorites and shortlists support deliberate, criteria-based comparison instead of ad-hoc decision-making."
+        }
+    ]}
+/>
+
+<Callout variant="success" title="The Impact">
+    TUMApply continues to serve the typical applicant effectively while intentionally broadening access for underrepresented groups. By integrating inclusive and sustainable principles into core system processes, such as minimizing paper-based administration and redundant application steps, the platform promotes transparency, institutional trust, and more diverse participation in doctoral education over time.
+</Callout>
+
+## Prototype
+
+The prototype demonstrates how these principles translate into a usable interface. You can **navigate freely through the platform** and **simulate a login** using any random email and password.
+
+<IconList
+    items={[
+        {
+            title: "Applicant Login",
+            body: "Shows the applicant-facing experience, including guidance, status tracking, and communication features."
+        },
+        {
+            title: "Professor Login",
+            body: "Shows the reviewer-facing interface with anonymized applications and structured review tools."
+        }
+    ]}
+/>
+<iframe
+    width="850"
+    height="600"
+    src="https://khaki-mix-14477121.figma.site"
+    style={{ border: '1px solid black' }}
+    allowFullScreen>
+</iframe>
+
+## Team & Contributions
+
+<div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', flexWrap: 'wrap', marginTop: '2rem' }}>
+    <div style={{ textAlign: 'center' }}>
+        <img src="/png/tumapply/aniruddh_zaveri.png" alt="Aniruddh Zaveri" style={{ width: '150px', height: '150px', borderRadius: '8px' }} />
+        <p style={{ marginTop: '0.5rem', fontWeight: 'bold' }}>Aniruddh Zaveri</p>
+    </div>
+    <div style={{ textAlign: 'center' }}>
+        <img src="/png/tumapply/ishani_budhwar.png" alt="Ishani Budhwar" style={{ width: '150px', height: '150px', borderRadius: '8px' }} />
+        <p style={{ marginTop: '0.5rem', fontWeight: 'bold' }}>Ishani Budhwar</p>
+    </div>
+    <div style={{ textAlign: 'center' }}>
+        <img src="/png/tumapply/tim_sommer.png" alt="Tim Sommer" style={{ width: '150px', height: '150px', borderRadius: '8px' }} />
+        <p style={{ marginTop: '0.5rem', fontWeight: 'bold' }}>Tim Sommer</p>
+    </div>
+</div>
+
+
+<IconList
+    items={[
+        { 
+            title: "Aniruddh Zaveri", 
+            body: "Intermediate Presentation Slides, Systematic Journey Map + Literature Research, User Groups, Final Presentation Slides, Critical Reflection Cards, Project Report, Prototype Figma"
+        },
+        { 
+            title: "Ishani Budhwar", 
+            body: "Intermediate Presentation Slides, Systematic Journey Map, User Groups, Final Presentation Slides, Project Report, Prototype Figma"
+        },
+        {
+            title: "Tim Sommer",
+            body: "Research on Problems and Current State, Research on Solutions and Accessibility Features, User Groups, Project Report"
+        },
+    ]}
+/>
+
+Together, we strengthen trust, transparency, and long-term diversity in doctoral education.
+
+## Presentation Slides
+
+<PDF
+    src="/files/tumapply/TUMApply_Final_Presentation.pdf"
+    caption="TUMApply Final Presentation Slides"
+/>
+
+## Documentation
+
+*Note: AI was used as help and guidance for the creation of these documents.*
+
+### User Groups
+
+The following PDF shows all user groups that we defined and analyzed as part of the project.
+
+<PDF
+    src="/files/tumapply/UserGroups.pdf"
+    caption="TUMApply User Groups Documentation"
+/>
+
+### Critical Reflection Cards
+
+The Critical Reflection Cards document our continuous reflection on design decisions and their implications.
+
+<PDF
+    src="/files/tumapply/ReflectionCards.pdf"
+    caption="TUMApply Critical Reflection Cards"
+/>
+
+### Systemic Journey Map
+
+The Systemic Journey Map visualizes the entire application journey from the perspective of the different user groups.
+
+<PDF
+    src="/files/tumapply/SystematicJourneyMap.pdf"
+    caption="TUMApply Systemic Journey Map"
+/>
+
+
+## Authors
+
+Tim Sommer,
+Aniruddh Zaveri,
+Ishani Budhwar
