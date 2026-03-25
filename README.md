@@ -2,7 +2,7 @@
 
 Course website for the interdisciplinary module at TU Munich, hosted at [conscious-design.aet.cit.tum.de](https://conscious-design.aet.cit.tum.de).
 
-The site is a **vanilla JS single-page application** — no build step, no framework. It serves static files through nginx, with Caddy handling HTTPS in production.
+The site is a **vanilla JS single-page application** — no build step, no framework. It serves static files directly from Caddy, which also handles HTTPS in production.
 
 ---
 
@@ -23,9 +23,8 @@ The site is a **vanilla JS single-page application** — no build step, no frame
 ```
 static-site/
 ├── Caddyfile               # Caddy reverse-proxy config (production HTTPS)
-├── Dockerfile              # nginx:alpine image
-├── docker-compose.yml      # Orchestrates nginx + Caddy containers
-├── nginx.conf              # nginx config — SPA routing, gzip, cache headers
+├── Dockerfile              # caddy:2-alpine image
+├── docker-compose.yml      # Single-container Compose config
 │
 └── public/                 # Everything served to the browser
     ├── index.html          # Single HTML shell — mounts #app-root
@@ -100,34 +99,35 @@ cd static-site
 docker compose up --build
 ```
 
-The site is then available at `http://localhost:8080`.
+The site is then available at `http://localhost:80`.
 
+> Caddy will attempt to fetch a TLS certificate on startup. Locally it will fail and fall back to HTTP — that's fine. If you want to avoid the noise, swap the domain in `Caddyfile` for `:8080` while developing locally.
+ 
 ---
 
 ## Deployment
 
-Production runs two Docker containers managed by Compose:
+Production runs a single Docker container — Caddy serves the static files and handles HTTPS directly:
 
 | Container | Image | Role |
 |---|---|---|
-| `rsi-website` | `nginx:alpine` (local build) | Serves the static files on port 80 |
-| `caddy-proxy` | `caddy:2-alpine` | Terminates TLS, reverse-proxies to nginx |
+| `rsi-website` | `caddy:2-alpine` (local build) | Serves static files, terminates TLS |
 
-Caddy automatically provisions and renews the Let's Encrypt certificate for `conscious-design.aet.cit.tum.de`. Certificates are stored in the `caddy_data` Docker volume.
+Caddy automatically provisions and renews the Let's Encrypt certificate for `conscious-design.aet.cit.tum.de`. Certificates are stored in the `caddy_data` Docker volume and survive container restarts.
 
 **Deploy or update:**
 
 ```bash
-cd static-site
-docker compose pull          # update Caddy image if needed
-docker compose up -d --build # rebuild nginx image with latest files
+cd RSI-Website
+docker compose up -d --build
 ```
 
-**nginx behaviour:**
-- All unmatched paths fall back to `index.html` (SPA routing).
+**Caddy behaviour:**
+- All unmatched paths fall back to `index.html` (SPA routing via `try_files`).
 - Static assets (JS, CSS, images) are cached for 1 year with `immutable`.
 - HTML and JSON files are never cached (`no-store`).
-- Gzip is enabled for text formats.
+- Gzip is enabled via `encode gzip`.
+- Security headers (`X-Frame-Options`, `X-Content-Type-Options`, `X-XSS-Protection`) are set on all responses.
 
 ---
 

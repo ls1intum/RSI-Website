@@ -6,7 +6,7 @@ export class Footer {
             {
                 heading: 'Explore',
                 links: [
-                    { label: 'home', href: '/' },
+                    { label: 'Home', href: '/' },
                     { label: 'Projects', href: '/projects' }
                 ]
             },
