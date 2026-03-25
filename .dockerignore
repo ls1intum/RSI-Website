@@ -1,9 +1,8 @@
 .git
-.gitignore
+.idea
 .DS_Store
 README.md
-QUICKSTART.md
+SUBMISSION_README.md
 serve.py
 docker-compose.yml
 Dockerfile
-*.md

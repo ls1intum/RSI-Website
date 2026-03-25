@@ -1,7 +1,7 @@
 services:
   web:
     build:
-      context: static-site
+      context: .
       dockerfile: Dockerfile
     container_name: rsi-website
     restart: unless-stopped
