@@ -1,8 +1,17 @@
 services:
-  website:
-    build: .
-    container_name: website_container
-    restart: always
+  web:
+    build:
+      context: static-site
+      dockerfile: Dockerfile
+    container_name: rsi-website
+    restart: unless-stopped
     ports:
-      - "3000:3000"
-    # Environment variables are safer passed here than hardcoded
+      - "80:80"
+      - "443:443"
+    volumes:
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  caddy_data:
+  caddy_config:

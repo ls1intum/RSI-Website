@@ -1,43 +1,6 @@
-# 1. Base image
-FROM node:20-alpine AS base
-
-# 2. Dependencies
-FROM base AS deps
-RUN apk add --no-cache libc6-compat
-WORKDIR /app
-COPY package.json package-lock.json* ./
-RUN npm ci
-
-# 3. Builder
-FROM base AS builder
-WORKDIR /app
-COPY --from=deps /app/node_modules ./node_modules
-COPY . .
-# Disable Next.js telemetry (optional)
-ENV NEXT_TELEMETRY_DISABLED 1
-RUN npm run build
-
-# 4. Production Runner
-FROM base AS runner
-WORKDIR /app
-ENV NODE_ENV production
-ENV NEXT_TELEMETRY_DISABLED 1
-
-# Create a system group and user so the app doesn't run as root
-# This is a HUGE security upgrade
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
-
-COPY --from=builder /app/public ./public
-
-# Automatically leverage output traces to reduce image size
-COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
-
-USER nextjs
-
-EXPOSE 3000
-ENV PORT 3000
-ENV HOSTNAME "0.0.0.0"
-
-CMD ["node", "server.js"]
+# Use nginx alpine for a lightweight web server
+FROM caddy:2-alpine
+COPY public /srv
+COPY Caddyfile /etc/caddy/Caddyfile
+EXPOSE 80 443
+CMD ["caddy", "run", "--config", "/etc/caddy/Caddyfile"]

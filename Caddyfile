@@ -1,0 +1,22 @@
+conscious-design.aet.cit.tum.de {
+    root * /srv
+    file_server
+    try_files {path} /index.html
+    encode gzip
+
+    @static {
+        path *.js *.css *.png *.jpg *.jpeg *.gif *.ico *.svg *.woff *.woff2 *.ttf *.eot
+    }
+    header @static Cache-Control "public, max-age=31536000, immutable"
+
+    @nocache {
+        path *.html *.json
+    }
+    header @nocache Cache-Control "no-store, no-cache, must-revalidate"
+
+    header {
+        X-Frame-Options "SAMEORIGIN"
+        X-Content-Type-Options "nosniff"
+        X-XSS-Protection "1; mode=block"
+    }
+}

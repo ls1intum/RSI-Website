@@ -1,0 +1,333 @@
+@import "tailwindcss";
+@import "carousel.css";
+
+/* ========================= */
+/* 🎨 Design Tokens → Theme  */
+/* ========================= */
+@theme {
+    /* Surfaces & Text */
+    --color-bg: hsl(0 0% 100%);
+    --color-surface: hsl(0 0% 98%);
+    --color-surface-border: hsl(220 13% 91%);
+    --color-surface-fg: hsl(222 47% 11%);
+
+    --color-text: hsl(222 47% 11%);
+    --color-text-muted: hsl(215 16% 47%);
+
+    /* Brand palette */
+    --color-brand-primary: hsl(259 84% 56%);
+    --color-brand-accent: hsl(326 100% 67%);
+    --color-brand-blue: hsl(217 91% 60%);
+    --color-brand-cyan: hsl(189 93% 54%);
+    --color-brand-green: hsl(152 45% 44%);
+    --color-brand-indigo: hsl(259 84% 56%);
+    --color-brand-orange: hsl(24 94% 53%);
+    --color-brand-pink: hsl(326 100% 67%);
+    --color-brand-purple: hsl(261 83% 63%);
+    --color-brand-red: hsl(0 84% 63%);
+    --color-brand-teal: hsl(173 61% 47%);
+    --color-brand-yellow: hsl(43 96% 56%);
+
+    --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-inter: 'Inter', sans-serif;
+
+    --radius-4xl: 2rem;
+}
+
+/* ========================= */
+/* 🧩 Base Layer             */
+/* ========================= */
+@layer base {
+    html,
+    body {
+        @apply bg-bg text-text antialiased;
+    }
+
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+/* ========================= */
+/* ✨ Animations & Utilities */
+/* ========================= */
+@layer utilities {
+    @keyframes fade-in { to { opacity: 1; } }
+    @keyframes fade-up { to { opacity: 1; transform: translateY(0); } }
+
+    .animate-fade-in { animation: fade-in 0.8s ease forwards; }
+    .animate-fade-up { animation: fade-up 0.8s ease forwards; }
+
+    .fade-up-hidden {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    .fade-up-visible {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 0.5s cubic-bezier(0, 0, 0.2, 1), transform 0.5s cubic-bezier(0, 0, 0.2, 1);
+    }
+
+    .rounded-4xl { border-radius: var(--radius-4xl); }
+
+    .card-initial {
+        width: 16rem;
+    }
+
+    .card-item-size {
+        width: 18rem;
+        aspect-ratio: 1.6 / 1;
+    }
+}
+
+/* ========================= */
+/* 📄 Submission Components  */
+/* ========================= */
+/*
+  Semantic classes for student HTML submissions.
+  The live site applies these automatically — students write clean HTML,
+  no Tailwind classes needed on their end.
+
+  For local preview, students can optionally link submission-preview.css.
+*/
+@layer components {
+
+    /* ── Prose ────────────────────────────────────────────────────────────
+       Applied by ProjectDetailPage.js to the wrapper div.
+       Students don't write this class — it's already on the container.
+    ── */
+    .submission-content h2 {
+        @apply mt-10 scroll-mt-24 text-2xl font-semibold tracking-tight text-surface-fg;
+    }
+    .submission-content h3 {
+        @apply mt-8 scroll-mt-24 text-xl font-semibold tracking-tight text-surface-fg;
+    }
+    .submission-content h4 {
+        @apply mt-6 scroll-mt-24 text-lg font-semibold tracking-tight text-surface-fg;
+    }
+    .submission-content p {
+        @apply mt-4 text-base leading-7 text-text-muted;
+    }
+    .submission-content ul:not(.cards):not(.icon-list):not(.list):not(.profile-list) {
+        @apply mt-4 list-disc pl-6 space-y-2 text-text-muted;
+    }
+    .submission-content ol {
+        @apply mt-4 list-decimal pl-6 space-y-2 text-text-muted;
+    }
+    .submission-content blockquote {
+        @apply mt-6 border-l-4 border-brand-primary pl-4 italic text-text-muted;
+    }
+
+    /* ── Figure ───────────────────────────────────────────────────────────
+       Matches React Figure component: mt-6, overflow-hidden rounded-xl
+       wrapper, object-contain image (no border on the img itself).
+
+       <figure>
+         <img src="..." alt="..." />
+         <figcaption>Caption</figcaption>
+       </figure>
+    ── */
+    .submission-content figure {
+        @apply mt-6;
+    }
+    .submission-content figure img {
+        @apply w-full h-auto object-contain rounded-xl m-0;
+    }
+    .submission-content figure video {
+        @apply w-full h-auto rounded-xl;
+    }
+    .submission-content figure iframe {
+        @apply w-full rounded-xl border border-surface-border m-0;
+    }
+    .submission-content figcaption {
+        @apply mt-2 text-xs text-text-muted;
+    }
+
+    .submission-content figure.hero {
+        @apply mt-5 overflow-hidden rounded-2xl bg-surface/80;
+    }
+    .submission-content figure.hero img {
+        @apply w-full h-auto object-cover rounded-none m-0;
+        aspect-ratio: 16 / 9;
+    }
+
+    /* ── Cards  (FeatureList equivalent) ─────────────────────────────────
+       Matches React FeatureList: 2-col grid, rounded-xl, bg-surface/60.
+
+       <ul class="cards">
+         <li class="card">
+           <strong>Title</strong>
+           <p>Body text.</p>
+         </li>
+       </ul>
+    ── */
+    .submission-content .cards {
+        @apply my-5 grid gap-4 list-none pl-0 md:grid-cols-2;
+    }
+    .submission-content .card {
+        @apply rounded-xl border border-surface-border bg-surface/60 p-4 m-0;
+    }
+    .submission-content .card strong {
+        @apply block font-semibold text-surface-fg;
+    }
+    .submission-content .card p {
+        @apply mt-1 text-sm text-text-muted m-0;
+    }
+
+    /* ── Icon List  (IconList equivalent) ────────────────────────────────
+       Matches React IconList: vertical list with green dot, no grid.
+
+       <ul class="icon-list">
+         <li>
+           <strong>Title</strong>
+           <p>Body text.</p>
+         </li>
+       </ul>
+    ── */
+    .submission-content .icon-list {
+        @apply my-5 space-y-4 list-none pl-0;
+    }
+    .submission-content .icon-list li {
+        @apply grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 m-0;
+    }
+    .submission-content .icon-list li::before {
+        content: '';
+        @apply col-start-1 row-start-1 mt-1.5 h-2 w-2 shrink-0 rounded-full bg-brand-green block;
+    }
+    .submission-content .icon-list li strong {
+        @apply col-start-2 row-start-1 font-semibold text-surface-fg block;
+    }
+    .submission-content .icon-list li p {
+        @apply col-start-2 row-start-2 text-sm text-text-muted mt-0;
+    }
+
+    /* ── Table ────────────────────────────────────────────────────────────
+       <div class="table-wrap">
+         <table> ... </table>
+       </div>
+    ── */
+    .submission-content .table-wrap {
+        @apply overflow-x-auto my-6;
+    }
+    .submission-content table {
+        @apply w-full border border-surface-border text-sm m-0;
+    }
+    .submission-content thead {
+        @apply bg-surface/80;
+    }
+    .submission-content th {
+        @apply px-4 py-3 text-left font-semibold text-surface-fg border border-surface-border;
+    }
+    .submission-content td {
+        @apply px-4 py-4 align-top text-text-muted border border-surface-border;
+    }
+
+    /* ── Callout ──────────────────────────────────────────────────────────
+       Matches React Callout exactly — uses brand color tokens, not Tailwind
+       named-color shades (green-50 etc.).
+
+       Variants: success | warning | danger | tip
+       (danger = was not in React but useful to keep; maps to brand-red)
+
+       <div class="callout success">
+         <strong>Title</strong>
+         <p>Body text.</p>
+       </div>
+    ── */
+    .submission-content .callout {
+        @apply my-6 rounded-xl border px-6 py-4;
+    }
+    .submission-content .callout strong {
+        @apply block mb-2 font-semibold;
+    }
+    .submission-content .callout > div,
+    .submission-content .callout p {
+        @apply text-sm text-text-muted m-0;
+    }
+
+    .submission-content .callout.success {
+        @apply bg-brand-green/10 border-brand-green text-brand-green;
+    }
+    .submission-content .callout.success strong { @apply text-brand-green; }
+    .submission-content .callout.success p      { @apply text-text-muted; }
+
+    .submission-content .callout.warning {
+        @apply bg-brand-yellow/10 border-brand-yellow text-brand-yellow;
+    }
+    .submission-content .callout.warning strong { @apply text-brand-yellow; }
+    .submission-content .callout.warning p      { @apply text-text-muted; }
+
+    .submission-content .callout.danger {
+        @apply bg-brand-red/10 border-brand-red text-brand-red;
+    }
+    .submission-content .callout.danger strong { @apply text-brand-red; }
+    .submission-content .callout.danger p      { @apply text-text-muted; }
+
+    .submission-content .callout.tip {
+        @apply bg-brand-purple/10 border-brand-purple text-brand-purple;
+    }
+    .submission-content .callout.tip strong { @apply text-brand-purple; }
+    .submission-content .callout.tip p      { @apply text-text-muted; }
+
+    /* ── Simple list ──────────────────────────────────────────────────────
+       For name/role credits — not a React equivalent, just a utility.
+
+       <ul class="list">
+         <li><strong>Name</strong> — Description</li>
+       </ul>
+    ── */
+    .submission-content .list {
+        @apply my-6 list-none pl-0 space-y-3;
+    }
+    .submission-content .list li {
+        @apply text-sm text-text-muted leading-relaxed border-l-2 border-surface-border pl-4;
+    }
+    .submission-content .list li strong {
+        @apply text-surface-fg font-semibold;
+    }
+
+    /* ── Profile list ─────────────────────────────────────────────────────
+       For labelled key/value lines (e.g. "Gender: Male") with no bullets.
+
+       <ul class="profile-list">
+         <li><strong>Label:</strong> Value</li>
+       </ul>
+    ── */
+    .submission-content .profile-list {
+        @apply my-4 list-none pl-0 space-y-1;
+    }
+    .submission-content .profile-list li {
+        @apply text-base text-text-muted leading-7;
+    }
+    .submission-content .profile-list li strong {
+        @apply text-surface-fg font-semibold;
+    }
+
+    /* ── PDF embed ────────────────────────────────────────────────────────
+       Matches React PDF component: overflow-hidden rounded-xl wrapper,
+       border, bg-surface/80, default height 600.
+
+       <figure>
+         <iframe class="pdf" src="/files/project/slides.pdf" height="600"></iframe>
+         <figcaption>Caption</figcaption>
+       </figure>
+    ── */
+    .submission-content .pdf {
+        @apply w-full border-none;
+    }
+
+    /* ── Figma embed ──────────────────────────────────────────────────────
+       <figure>
+         <iframe class="figma" src="https://www.figma.com/embed?..." height="600"></iframe>
+         <figcaption>Caption</figcaption>
+       </figure>
+    ── */
+    .submission-content .figma {
+        @apply w-full border-none;
+    }
+}

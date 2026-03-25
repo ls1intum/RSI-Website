@@ -1,0 +1,42 @@
+[
+  {
+    "slug":"hers",
+    "title":"Example Project: hers*",
+    "description":"hers* addresses gender-based insecurity in public spaces. It focuses on empowering FLINTA* (women, lesbians, intersex, non-binary, trans, and agender people) through an ecosystem that combines a mobile app, a wearable safety device, and a strong community network.",
+    "date":"2021-07-19",
+    "heroSrc":"public/assets/png/hers/hers_h.png",
+    "lead":"hers* addresses gender-based insecurity in public spaces. It focuses on empowering FLINTA* (women, lesbians, intersex, non-binary, trans, and agender people) through an ecosystem that combines a mobile app, a wearable safety device, and a strong community network."
+  },
+  {
+    "slug":"trapalert",
+    "title":"TrapAlert: Product Overview",
+    "description":"TrapAlert is an accessibility observability platform that automatically detects and surfaces moments of user frustration caused by digital barriers. By transforming silent struggles into empathetic, data-driven insights for development teams, it accelerates the creation of a more inclusive, equitable, and accessible digital world for everyone.",
+    "date":"2026-01-15",
+    "heroSrc":"public/assets/png/trapalert/trapalertHero.png",
+    "lead":"TrapAlert is an accessibility observability platform that automatically detects and surfaces moments of user frustration caused by digital barriers. By transforming silent struggles into empathetic, data-driven insights for development teams, it accelerates the creation of a more inclusive, equitable, and accessible digital world for everyone."
+  },
+  {
+    "slug":"truegram",
+    "title":"TrueGram",
+    "description":"A conscious social media alternative designed to replace addictive doomscrolling with intentional interaction, prioritizing user wellbeing over ad revenue.",
+    "date":"2026-01-15",
+    "heroSrc":"public/assets/png/truegram/truegram_hero.png",
+    "lead":"Break the Loop. Reclaim Your Time. TrueGram is the conscious layer for your digital life. It turns automatic scrolling behaviour into intentional living by rethinking how you interact with social media."
+  },
+  {
+    "slug":"tumApply",
+    "title":"TUMApply",
+    "description":"TUMApply rethinks the university application process at TUM. It focuses on inclusivity, transparency, and sustainability, providing a supportive ecosystem for diverse applicants.",
+    "date":"2026-01-15",
+    "heroSrc":"public/assets/png/tumapply/tumapply_hero.png",
+    "lead":"TUMApply transforms the TUM application process into a clear, supportive, and fair digital service. By addressing systemic, emotional, and informational barriers, it ensures equitable access to higher education for all applicants."
+  },
+  {
+    "slug":"tumCourseNavigator",
+    "title":"My TUM Course Navigator",
+    "description":"An extension of TUMonline that provides personalized course recommendations and peer reviews, enabling fair, informed and interest-driven course selection for all students.",
+    "date":"2026-01-15",
+    "heroSrc":"public/assets//png/tumcourse/Cover.png",
+    "lead":"An extension of TUMonline that provides personalized course recommendations and peer reviews, enabling fair, informed, and interest-driven course selection for all students."
+  }
+]

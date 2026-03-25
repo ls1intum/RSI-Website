@@ -1,0 +1,9 @@
+.git
+.gitignore
+.DS_Store
+README.md
+QUICKSTART.md
+serve.py
+docker-compose.yml
+Dockerfile
+*.md
