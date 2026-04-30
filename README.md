@@ -235,7 +235,7 @@ Or watch for changes during development:
 npx @tailwindcss/cli -i public/css/input.css -o public/css/style.css --watch
 ```
 
-### Design tokens
+### Design tokens 
 
 All colours and the font stack are defined as CSS custom properties in the `@theme` block at the top of `input.css`:
 
